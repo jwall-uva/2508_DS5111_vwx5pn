@@ -6,7 +6,7 @@ PYLINT = $(ENV)/bin/pylint
 PYTEST = $(ENV)/bin/pytest
 
 default:
-	@cat Makefile
+	@cat makefile
 
 env:
 	python3 -m venv $(ENV)
@@ -22,13 +22,6 @@ test: lint
 	$(PYTEST) -vv tests
 
 test_enrich:
-	cat data/mock_transcript.jsonl | $(PYTHON) -u bin/enrich_transcripts.py	. env/bin/activate; pip install -r requirements.txt
-
-lint:
-	pylint clean_ids.py
-
-test: lint
-	pytest -vv tests
-
-test_enrich:
-	@. env/bin/activate && cat mock_transcripts.jsonl | python -u bin/enrich_transcripts. py | python bin/validate_schema.py
+	cat data/mock_transcipts.jsonl | \
+	$(PYTHON) -u bin/enrich_transcripts.pu | \
+	$(PYTHON) bin/validate_schema.py 
