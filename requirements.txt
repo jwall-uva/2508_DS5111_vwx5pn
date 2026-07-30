@@ -3,3 +3,6 @@ numpy
 pylint
 pytest
 python-dotenv
+jupyter
+jupyterlab
+youtube-transcript-api

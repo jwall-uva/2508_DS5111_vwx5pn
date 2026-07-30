@@ -11,11 +11,11 @@ from abc import ABC, abstractmethod
 """Defines the abstract interface for transcript enrichment strategies."""
 
 # pylint: disable=too-few-public-methods
-class TranscriptExtractor(ABC):
+class TranscriptEnricher(ABC):
     """Abstract interface for enriching transcript data."""
 
     @abstractmethod
-    def fetch_raw_string(self, video_id: str, raw_text: str) -> dict:
+    def enrich_transcript(self, video_id: str, raw_text: str) -> dict:
         """Return structured enrichment data for a transcript."""
 
 # =====================================================================
