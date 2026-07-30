@@ -3,3 +3,5 @@ numpy
 pylint
 pytest
 python-dotenv
+jupyter
+jupyterlab
